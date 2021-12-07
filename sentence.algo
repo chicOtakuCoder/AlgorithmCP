@@ -1,0 +1,27 @@
+ALGORITHM sentence
+VAR
+    charLength,wordCount,vowelCount: INTEGER;
+    sentenceArray : ARRAY_OF type[];
+    noOfVowel : ARRAY_OF type[];
+
+BEGIN
+FUNCTION sentence(text) : object
+VAR
+    result = {
+        charLength: 0,
+        wordCount: 0;
+        vowelCount: 0;
+    }
+BEGIN
+    result.charLength = text.length
+
+    let sentenceArray = text.split(' ')
+    result.wordCount = sentenceArray.length
+
+    let noOfVowel = Array.from(text.toLowerCase())
+    result.vowelCount = noOfVowel.filter(letter => 'aeiou'.includes(letter)).length
+
+    RETURN result ;
+END
+
+END
