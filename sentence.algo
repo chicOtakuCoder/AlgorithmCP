@@ -1,8 +1,8 @@
 ALGORITHM sentence
 VAR
     charLength,wordCount,vowelCount: INTEGER;
-    sentenceArray : ARRAY_OF type[STRING];
-    noOfVowel : ARRAY_OF type[STRING];
+    sentenceArray : ARRAY_OF type STRING[];
+    noOfVowel : ARRAY_OF type STRING[];
 
 BEGIN
 FUNCTION sentence(text) : object
